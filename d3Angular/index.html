@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Angular Assignment</title>
+		<title>Angular with D3</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
       	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
   		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular-route.js"></script>
-		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script><!-- To add modal html -->
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
 	</head>
 	<body>
-	
+		<div ng-app="myApp" ng-controller="Ctrl">
+			<bars-chart chart-data="myData"  ></bars-chart>
+		</div>
+		<script src="app/app.js"></script>
 	</body>
 </html>
