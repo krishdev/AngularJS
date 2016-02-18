@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular with D3</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+	</head>
+	<body ng-app="promiseModule">
+		<div ng-controller="promiseCtrl">
+		<h3>$q is a subset of 'q' library it is a powerful way of using promises in Angular.js</h3>
+		<p>It can be used in three ways resole() reject() & notify</p>
+		<p>Here there is a simple example if the input should be filled with krishna other than krishna will throw an error message</p>
+			<input type="text" ng-model="yourName"> <button type="button" ng-click="getAction(yourName)">Check</button>
+			<pre>{{returnValue}}</pre>
+		</div>
+		<script>
+			var mainModule = angular.module('promiseModule',[]);
+			mainModule.controller('promiseCtrl',['$scope','$q',function($scope,$q) {
+				
+				$scope.getAction = function(name) {
+					var service = {};
+					service.promise = function(){
+						var q = $q.defer();
+						if(name == "krishna"){
+							q.resolve('No Error')
+						}
+						else{
+							console.log('error');
+							q.reject('Sorry There is an Error')
+						}
+						return q.promise
+					}
+					service.promise().then(
+						function(positive){$scope.returnValue = positive},//for success
+						function(error){$scope.returnValue = error}//for error
+					)
+				}
+				$scope.yourName="krishna";
+				/*$scope.promise = $scope.getName($scope.yourName);*/
+			}]);
+		</script>
+	</body>
+</html>
