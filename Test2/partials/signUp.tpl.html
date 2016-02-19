@@ -1,0 +1,41 @@
+<div class="container signUp">
+	<h3 ng-bind="message"></h3> 
+    <form name="signUpForm" novalidate ng-submit="submit(signUpForm.$valid)">
+	  <div class="form-group">
+		<label for="inputEmail">UserName</label>
+		<input type="email" class="form-control" name="inputEmail" ng-model="user.email" placeholder="Email" required>
+		</div>
+		 <div class="alert alert-warning" ng-show="signUpForm.$submitted || signUpForm.inputEmail.$touched">
+			  <span ng-show="signUpForm.inputEmail.$error.required">This field is required</span>
+			  <span ng-show="signUpForm.inputEmail.$error.email">This is not a valid email.</span>
+		</div>
+		<div ng-messages="signUpForm.inputEmail.$error" ng-messages-include="partials/messages.html"></div>
+	   <div class="form-group">
+			<label>First Name</label>
+			<input type="text" name="fname" class="form-control" ng-model="registration.user.fname" ng-pattern="/^(\D)+$/" required />
+			<div ng-messages="signUpForm.fname.$error" ng-messages-include="partials/messages.html"></div>
+			<div ng-show="signUpForm.fname.$error.pattern">Only Text</div>
+		</div>
+		<div class="form-group">
+			<label>Last Name</label>
+			<input type="text" name="lname" class="form-control" ng-model="registration.user.lname" ng-pattern="/^(\D)+$/" required />
+			<div ng-messages="signUpForm.lname.$error" ng-messages-include="partials/messages.html"></div>
+			<div ng-show="signUpForm.lname.$error.pattern">Only Text</div>
+		</div>
+		<div class="form-group">
+			<label>Password</label>
+			<input type="password" name="password" class="form-control" ng-model="registration.user.password" required />
+			<div ng-messages="signUpForm.password.$error" ng-messages-include="partials/messages.html"></div>
+		</div>
+		<div class="form-group">
+			<label>Confirm Password</label>
+			<input type="password" name="confirmPassword" class="form-control" 
+				   ng-model="registration.user.confirmPassword" 
+				   required compare-to="registration.user.password" />
+			<div ng-messages="signUpForm.confirmPassword.$error" ng-messages-include="partials/messages.html"></div>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">SignUp</button>
+		</div>
+    </form> 
+</div>

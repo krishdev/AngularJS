@@ -1,0 +1,33 @@
+.imageA{
+	font-size: 2em;
+font-family: ABeeZee ;
+line-height: 1em;
+color: #000;
+font-size: 50px;
+text-shadow:0px 0px 0 rgb(231,231,231),1px 1px 0 rgb(216,216,216),2px 2px 0 rgb(202,202,202),3px 3px 0 rgb(187,187,187),4px 4px 0 rgb(173,173,173),5px 5px 0 rgb(158,158,158), 6px 6px 0 rgb(144,144,144),7px 7px 6px rgba(0,0,0,0.45),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
+
+}
+.imageContainer{
+	padding: 5%;
+	width: 15%;
+	text-align: center;
+	border-radius: 50%;
+	background-color: #AAAB28;
+	-webkit-box-shadow: 2px 15px 5px -1px rgba(135,148,35,1),-9px 15px 90px -17px rgba(0,0,0,0.97);
+-moz-box-shadow: 2px 15px 5px -1px rgba(135,148,35,1),-9px 15px 90px -17px rgba(0,0,0,0.97);
+box-shadow: 2px 15px 5px -1px rgba(135,148,35,1),-9px 15px 90px -17px rgba(0,0,0,0.97);
+	margin: 0 auto 0 auto;
+}
+.gradientContainer{
+	width: 25%;
+	height: 200px;
+	background: -moz-linear-gradient(29deg, rgba(0,68,1,0) 0%, rgba(0,68,1,0.44) 20%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,1) 72%),-moz-linear-gradient(176deg, rgba(147,209,0,0) 9%, rgba(147,209,0,0.29) 23%, rgba(147,209,0,0.89) 56%, rgba(124,176,0,1) 62%, rgba(0,0,0,1) 95%);
+	background: -webkit-linear-gradient(29deg, rgba(0,68,1,0) 0%, rgba(0,68,1,0.44) 20%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,1) 72%),-webkit-linear-gradient(176deg, rgba(147,209,0,0) 9%, rgba(147,209,0,0.29) 23%, rgba(147,209,0,0.89) 56%, rgba(124,176,0,1) 62%, rgba(0,0,0,1) 95%);
+	background: -o-linear-gradient(29deg, rgba(0,68,1,0) 0%, rgba(0,68,1,0.44) 20%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,1) 72%),-o-linear-gradient(176deg, rgba(147,209,0,0) 9%, rgba(147,209,0,0.29) 23%, rgba(147,209,0,0.89) 56%, rgba(124,176,0,1) 62%, rgba(0,0,0,1) 95%);;
+	background: -ms-linear-gradient(29deg, rgba(0,68,1,0) 0%, rgba(0,68,1,0.44) 20%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,1) 72%),-ms-linear-gradient(176deg, rgba(147,209,0,0) 9%, rgba(147,209,0,0.29) 23%, rgba(147,209,0,0.89) 56%, rgba(124,176,0,1) 62%, rgba(0,0,0,1) 95%);
+	background: linear-gradient(61deg, rgba(0,68,1,0) 0%, rgba(0,68,1,0.44) 20%, rgba(0,0,0,0.7) 45%, rgba(0,0,0,1) 72%),linear-gradient(274deg, rgba(147,209,0,0) 9%, rgba(147,209,0,0.29) 23%, rgba(147,209,0,0.89) 56%, rgba(124,176,0,1) 62%, rgba(0,0,0,1) 95%);
+	margin: 0 auto 0 auto;
+}
+h3{
+	text-align: center;
+}

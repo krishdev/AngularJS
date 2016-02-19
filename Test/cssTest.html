@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Test</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+		<script src="app/vendor/angular-ui-router.js"></script>
+	  <link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/scripts.js"></script>
+</head>
+<body ng-app="testApp">
+	<div class="container">
+		<ul class="nav nav-tabs">
+		  <li><a ui-sref="test1">Character Image</a></li>
+		  <li><a ui-sref="test2">Gradient</a></li>
+		  <li><a ui-sref="test3">Number To Excel Column Character</a></li>
+			<li><a ui-sref="test4">String Replaces Number</a></li>
+		</ul>
+		<div>
+			<div ui-view></div>
+		</div>
+	</div>
+	<script src="app/app.js"></script>
+	<script src="app/controller/theController.js"></script>
+</body>
+</html>

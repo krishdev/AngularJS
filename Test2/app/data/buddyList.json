@@ -1,0 +1,123 @@
+{
+	"buddyList": [{
+		"fname": "Sara",
+		"lname": "Williams",
+		"tel": "(834)833-6674",
+		"address": "2003 Pulvinar Ct",
+		"city": "Conover",
+		"state": "VT",
+		"zip": 19809,
+		"id": 1,
+		"email": "SDunn@at.org",
+		"username": "NWeatherly",
+		"status": "Available"
+	}, {
+		"fname": "Ginger",
+		"lname": "Wurttemberg",
+		"tel": "(563)805-3413",
+		"address": "2843 Pulvinar St",
+		"city": "Eastvale",
+		"state": "DC",
+		"zip": 63016,
+		"id": 2,
+		"email": "GWells@vestibulum.ly",
+		"username": "NCox",
+		"status": "Busy"
+	}, {
+		"fname": "Monika",
+		"lname": "Belleque",
+		"tel": "(288)455-2563",
+		"address": "373 Pulvinar Ln",
+		"city": "Topeka",
+		"state": "DE",
+		"zip": 36220,
+		"id": 3,
+		"email": "AWright@augue.com",
+		"username": "SReinhard",
+		"status": "Idle"
+	}, {
+		"fname": "Sabrina",
+		"lname": "Ford",
+		"tel": "(746)629-6778",
+		"address": "3754 Vitae St",
+		"city": "Emmaus",
+		"state": "IA",
+		"zip": 22466,
+		"id": 4,
+		"email": "CIliatova@elementum.gov",
+		"username": "SKnowles",
+		"status": "Offline"
+	}, {
+		"fname": "Olivia",
+		"lname": "Faust",
+		"tel": "(394)439-5838",
+		"address": "8105 Fringilla St",
+		"city": "Chicago",
+		"state": "LA",
+		"zip": 39794,
+		"id": 5,
+		"email": "RStabile@ac.com",
+		"username": "RPsarros",
+		"status": "Available"
+	}, {
+		"fname": "Laurence",
+		"lname": "Fitzgerald",
+		"tel": "(310)923-0780",
+		"address": "3505 Mi Ln",
+		"city": "Lacey",
+		"state": "DE",
+		"zip": 41977,
+		"id": 6,
+		"email": "KApotheloz@vitae.ly",
+		"username": "ELubold",
+		"status": "Busy"
+	}, {
+		"fname": "Joethelia",
+		"lname": "Franzin",
+		"tel": "(650)837-5837",
+		"address": "7903 Vel Rd",
+		"city": "Orlando",
+		"state": "MI",
+		"zip": 25183,
+		"id": 7,
+		"email": "DPitts@at.io",
+		"username": "SScott",
+		"status": "Available"
+	}, {
+		"fname": "Lilia",
+		"lname": "Bashford",
+		"tel": "(429)198-7192",
+		"address": "3805 Nec Rd",
+		"city": "Atwater",
+		"state": "NC",
+		"zip": 36072,
+		"id": 8,
+		"email": "HWoode@magna.gov",
+		"username": "PConk",
+		"status": "Idle"
+	}, {
+		"fname": "Eric",
+		"lname": "Preston",
+		"tel": "(479)005-6353",
+		"address": "6557 Velit Rd",
+		"city": "Bloomingdale",
+		"state": "MD",
+		"zip": 93787,
+		"id": 9,
+		"email": "SMcdow@dolor.ly",
+		"username": "PNorth",
+		"status": "Offline"
+	}, {
+		"fname": "Alisa",
+		"lname": "Szymanski",
+		"tel": "(432)169-7558",
+		"address": "42 Sit Dr",
+		"city": "Cincinnati",
+		"state": "PA",
+		"zip": 19626,
+		"id": 10,
+		"email": "CPuglisi@nunc.com",
+		"username": "NUlvestad",
+		"status": "Offline"
+	}]
+}
