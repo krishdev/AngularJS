@@ -10,7 +10,8 @@
 		"id": 1,
 		"email": "SDunn@at.org",
 		"username": "NWeatherly",
-		"status": "Available"
+		"status": "Available",
+		"dob":"10/11/1985"
 	}, {
 		"fname": "Ginger",
 		"lname": "Wurttemberg",
@@ -22,7 +23,8 @@
 		"id": 2,
 		"email": "GWells@vestibulum.ly",
 		"username": "NCox",
-		"status": "Busy"
+		"status": "Busy",
+		"dob":"9/12/1986"
 	}, {
 		"fname": "Monika",
 		"lname": "Belleque",
@@ -33,8 +35,9 @@
 		"zip": 36220,
 		"id": 3,
 		"email": "AWright@augue.com",
-		"username": "SReinhard",
-		"status": "Idle"
+		"username": "SReinhard",		
+		"status": "Idle",
+		"dob":"12/01/1985"
 	}, {
 		"fname": "Sabrina",
 		"lname": "Ford",
@@ -46,7 +49,8 @@
 		"id": 4,
 		"email": "CIliatova@elementum.gov",
 		"username": "SKnowles",
-		"status": "Offline"
+		"status": "Offline",
+		"dob":"08/07/1988"
 	}, {
 		"fname": "Olivia",
 		"lname": "Faust",
@@ -58,7 +62,8 @@
 		"id": 5,
 		"email": "RStabile@ac.com",
 		"username": "RPsarros",
-		"status": "Available"
+		"status": "Available",
+		"dob":"05/25/1990"
 	}, {
 		"fname": "Laurence",
 		"lname": "Fitzgerald",
@@ -70,7 +75,8 @@
 		"id": 6,
 		"email": "KApotheloz@vitae.ly",
 		"username": "ELubold",
-		"status": "Busy"
+		"status": "Busy",
+		"dob":"07/11/1989"
 	}, {
 		"fname": "Joethelia",
 		"lname": "Franzin",
@@ -82,7 +88,8 @@
 		"id": 7,
 		"email": "DPitts@at.io",
 		"username": "SScott",
-		"status": "Available"
+		"status": "Available",
+		"dob":"11/11/1985"
 	}, {
 		"fname": "Lilia",
 		"lname": "Bashford",
@@ -94,7 +101,8 @@
 		"id": 8,
 		"email": "HWoode@magna.gov",
 		"username": "PConk",
-		"status": "Idle"
+		"status": "Idle",
+		"dob":"05/11/1989"
 	}, {
 		"fname": "Eric",
 		"lname": "Preston",
@@ -106,7 +114,8 @@
 		"id": 9,
 		"email": "SMcdow@dolor.ly",
 		"username": "PNorth",
-		"status": "Offline"
+		"status": "Offline",
+		"dob":"06/12/1987"
 	}, {
 		"fname": "Alisa",
 		"lname": "Szymanski",
@@ -118,6 +127,7 @@
 		"id": 10,
 		"email": "CPuglisi@nunc.com",
 		"username": "NUlvestad",
-		"status": "Offline"
+		"status": "Offline",
+		"dob":"10/11/1987"
 	}]
 }

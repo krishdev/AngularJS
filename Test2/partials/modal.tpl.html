@@ -1,0 +1,84 @@
+
+      <div class="modal-header">
+        <button type="button" class="close" ng-click="cancel()">&times;</button>
+        <h4 class="modal-title">Add A Buddy</h4>
+      </div>
+      <div class="modal-body" ng-controller="buddyController">
+		  <b ng-bind="requiredBuddyForm"></b>
+        <form name="addForm" novalidate ng-submit="submitForm(addForm.$valid)">
+		  <div class="form-group">
+			<label for="inputEmail">Email</label>
+			<input type="email" class="form-control" name="inputEmail" ng-model="newBuddy.email" required>
+			<div ng-messages="addForm.inputEmail.$error" ng-messages-include="partials/messages.html"></div>
+			</div>
+			 <div class="errorMessage" ng-show="addForm.$submitted || addForm.inputEmail.$touched">
+				  <span ng-show="addForm.inputEmail.$error.email">This is not a valid email.</span>
+			</div>
+			<div class="form-group">
+			<label for="username">UserName</label>
+			<input type="text" class="form-control" name="username" ng-model="newBuddy.username" required>
+			<div ng-messages="addForm.username.$error" ng-messages-include="partials/messages.html"></div>
+			</div>
+		   <div class="form-group">
+				<label>First Name</label>
+				<input type="text" name="fname" class="form-control" ng-model="newBuddy.fname" ng-pattern="/^(\D)+$/" required />
+				<div ng-messages="addForm.fname.$error" ng-messages-include="partials/messages.html"></div>
+				<div ng-show="addForm.fname.$error.pattern">Only Text</div>
+			</div>
+			<div class="form-group">
+				<label>Last Name</label>
+				<input type="text" name="lname" class="form-control" ng-model="newBuddy.lname" ng-pattern="/^(\D)+$/" required />
+				<div ng-messages="addForm.lname.$error" ng-messages-include="partials/messages.html"></div>
+				<div ng-show="addForm.lname.$error.pattern">Only Text</div>
+			</div>
+			<div class="form-group">
+				<label>Phone Number</label>
+				<input type="text" name="tel" class="form-control" ng-model="newBuddy.tel" ng-pattern="/^[0-9]{1,10}$/" required />
+				<div ng-messages="addForm.tel.$error" ng-messages-include="partials/messages.html"></div>
+				<div ng-show="addForm.tel.$error.pattern">Only Number(limited to 10)</div>
+			</div>
+			<div class="form-group">
+				<label>DOB</label>
+				<input type="date" name="dob" class="form-control" ng-model="newBuddy.dob" required>
+			</div>
+			<div class="form-group">
+				<label>Street</label>
+				<input type="text" name="address" class="form-control" ng-model="newBuddy.address" required>
+				<div ng-messages="addForm.address.$error" ng-messages-include="partials/messages.html"></div>
+			</div>
+			<div class="form-group">
+				<label>City</label>
+				<input type="text" name="city" class="form-control" ng-model="newBuddy.city" required>
+				<div ng-messages="addForm.city.$error" ng-messages-include="partials/messages.html"></div>
+			</div>
+			<div class="form-group">
+				<label>State</label>
+				<input type="text" name="state" class="form-control" ng-model="newBuddy.state" ng-maxlength="2" required>
+				<div ng-messages="addForm.state.$error" ng-messages-include="partials/messages.html"></div>
+				<div ng-show="addForm.state.$error.max">Only 2 Letters</div>
+			</div>
+			<div class="form-group">
+				<label>Zip</label>
+				<input type="text" name="zip" class="form-control" ng-model="newBuddy.zip" ng-pattern="/^[0-9]{1,5}$/" required />
+				<div ng-messages="addForm.zip.$error" ng-messages-include="partials/messages.html"></div>
+				<div class="errorMessage" ng-show="addForm.zip.$error.pattern">Only Number(limited to 5)</div>
+			</div>
+			<div class="form-group">
+				<label>Status</label>
+				<select name="status" ng-model="newBuddy.status" required>
+					<option value="Available">Available</option>
+					<option value="Offline">Offline</option>
+					<option value="Idle">Idle</option>
+					<option value="Busy">Busy</option>
+				</select>
+				<div ng-messages="addForm.status.$error" ng-messages-include="partials/messages.html"></div>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary">SignUp</button>
+			</div>
+		</form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="cancel()">Close</button>
+      </div>
+   

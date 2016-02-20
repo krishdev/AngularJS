@@ -18,3 +18,27 @@
 	margin: 3%;
 	border: 1px solid #D3D3D3;
 }
+.fLeft{
+	float: left;
+}
+.fRight{
+	float: right;
+}
+.clr{
+	clear: both;
+}
+.errorMessage{
+	color: red;
+	font-size: smaller;
+}
+.left-inner-addon {
+    position: relative;
+}
+.left-inner-addon input {
+    padding-left: 30px;    
+}
+.left-inner-addon i {
+    position: absolute;
+    padding: 5px 12px;
+    pointer-events: none;
+}

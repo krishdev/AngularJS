@@ -6,10 +6,12 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-      	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
-		<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.2.js"></script>
+      	<script src="app/vendor/angular.min.js"></script>
+		<script src="app/vendor/bootstrap-tpls-1.1.2.js"></script>
 		<script src="app/vendor/angular-ui-router.js"></script>
 		<script src="https://code.angularjs.org/1.3.0-rc.2/angular-messages.js"></script>
+		<link rel="stylesheet" href="app/vendor/jquery-ui.css">
+		<script src="app/vendor/jquery-ui.js"></script>
 	  	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body ng-app="testApp">
@@ -19,7 +21,7 @@
 		  <a class="navbar-brand" href="#">Test</a>
 		</div>
 		<ul class="nav navbar-nav">
-		  <li class="active"><a ui-sref="buddyList">BuddyList</a></li>
+		  <li class="active"><a href="#/buddy/List">BuddyList</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 		  <li><a ui-sref="signUp"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -27,10 +29,12 @@
 	  </div>
 	</nav>
 	<div ui-view></div>
+	<script src="app/common/dateModule.js"></script>
 	<script src="app/app.js"></script>
 	<script src="app/factory/buddyFactory.js"></script>
 	<script src="app/controller/buddyCntrl.js"></script>
 	<script src="app/controller/theController.js"></script>
 	<script src="app/directive/confirmPass.js"></script>
+	<script src="app/directive/customDatePicker.js"></script>
 </body>
 </html>

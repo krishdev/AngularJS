@@ -5,7 +5,7 @@
 		<label for="inputEmail">UserName</label>
 		<input type="email" class="form-control" name="inputEmail" ng-model="user.email" placeholder="Email" required>
 		</div>
-		 <div class="alert alert-warning" ng-show="signUpForm.$submitted || signUpForm.inputEmail.$touched">
+		 <div class="errorMessage" ng-show="signUpForm.$submitted || signUpForm.inputEmail.$touched">
 			  <span ng-show="signUpForm.inputEmail.$error.required">This field is required</span>
 			  <span ng-show="signUpForm.inputEmail.$error.email">This is not a valid email.</span>
 		</div>
@@ -24,8 +24,9 @@
 		</div>
 		<div class="form-group">
 			<label>Password</label>
-			<input type="password" name="password" class="form-control" ng-model="registration.user.password" required />
+			<input type="password" name="password" class="form-control" ng-model="registration.user.password" ng-minlength="6" required />
 			<div ng-messages="signUpForm.password.$error" ng-messages-include="partials/messages.html"></div>
+			<div ng-show="signUpForm.password.$error.min">Should be atleast 6</div>
 		</div>
 		<div class="form-group">
 			<label>Confirm Password</label>
@@ -33,6 +34,14 @@
 				   ng-model="registration.user.confirmPassword" 
 				   required compare-to="registration.user.password" />
 			<div ng-messages="signUpForm.confirmPassword.$error" ng-messages-include="partials/messages.html"></div>
+		</div>
+		<div class="form-group">
+			<div class="left-inner-addon">
+				<i class="glyphicon glyphicon-calendar"></i>
+				<input type="text" name="dob" ng-model="registration.user.dob"date-options="dateOptions" custom-datepicker required>
+				<div ng-messages="signUpForm.dob.$error" ng-messages-include="partials/messages.html"></div>
+			</div>
+			<div ng-show="signUpForm.dob.$error.min"></div>
 		</div>
 		<div class="form-group">
 			<button type="submit" class="btn btn-primary">SignUp</button>

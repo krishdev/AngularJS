@@ -1,4 +1,4 @@
-var mainModule = angular.module('testApp',['ui.router','ngMessages']);
+var mainModule = angular.module('testApp',['ui.router','ngMessages','ui.bootstrap','ui.date']);
 mainModule.config(function($stateProvider, $urlRouterProvider) {
 	$urlRouterProvider.otherwise("/default");
 	$stateProvider
@@ -6,16 +6,21 @@ mainModule.config(function($stateProvider, $urlRouterProvider) {
       url: "/default",
       templateUrl: "partials/default.tpl.html"
 	})
-	.state('buddyList', {
-      url: "/buddyList",
-      templateUrl: "partials/buddyList.tpl.html",
+	.state('buddy', {
+	  abstract: true,
+      url: "/buddy",
+      templateUrl: "partials/buddy.html",
 		controller: "buddyController"
 	})
-	.state('buddyList.details',{
+	.state('buddy.buddyList', {
+      url: "/List",
+      templateUrl: "partials/buddy.list.tpl.html"
+	})
+	.state('buddy.buddydetails',{
 		url: "/:id",
-		templateUrl: "buddyDetails.tpl.html",
+		templateUrl: "partials/buddy.details.tpl.html",
 		controller: function ($scope,$stateParams){
-			$scope.buddy = $scope.buddyDetails[$stateParams.id];
+			$scope.buddy = $scope.buddyDetails[$stateParams.id-1];
 		}
 	})
     .state('signUp', {

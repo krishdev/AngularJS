@@ -1,4 +1,4 @@
-<div class="container">
+<h3>Complete Details</h3>
 	<ul class="buddyList">
 		<li>
 			<div class="buddyContainer">
@@ -6,8 +6,10 @@
 				<b>FirstName</b> : <span ng-bind="buddy.fname"></span><br>
 				<b>LastName</b>  : <span ng-bind="buddy.lname"></span><br>
 				<b>Status</b>    : <span ng-bind="buddy.status"></span><br>
-				<button type="button" class="btn buddy-default" ng-click="getFullDetails(bud.id)">View More</button>
+				<b>DOB</b>    : <span ng-bind="buddy.dob"></span><br>
+				<b>EmailID</b>    : <span ng-bind="buddy.email"></span><br>
+				<b>Address</b>    : <span ng-bind="buddy.address"></span><br>
+				<a href="#/buddy/List">Back To The List</a>
 			</div>
 		</li>
 	</ul>
-</div>
