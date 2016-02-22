@@ -1,6 +1,23 @@
-
+<div><input type="search" ng-model="fnamesearch.fname" placeholder="Search by first name"></div>
+<div><input type="search" ng-model="fnamesearch.lname" placeholder="Search by last name"></div>
+<div><input type="search" ng-model="fnamesearch.username" placeholder="Search by user name"></div>
+<div>
+	<div class="btn-group">
+	  <button type="button" class="btn btn-primary">Select Status</button>
+	  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+		<span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu" role="menu">
+		<li ng-click="selectStatus('Available')"><a >Available</a></li>
+		<li ng-click="selectStatus('Busy')"><a>Busy</a></li>
+		<li ng-click="selectStatus('Idle')"><a>Idle</a></li>
+		<li ng-click="selectStatus('Offline')"><a>Offline</a></li>
+		<li ng-click="statusAll('All')"><a>All</a></li>
+	  </ul>
+	</div>
+</div>
 	<ul class="buddyList">
-		<li ng-repeat="bud in buddyDetails">
+		<li ng-repeat="bud in buddyDetails | filter:fnamesearch | fnameFilter:statusArray">
 			<div class="buddyContainer" data="{{bud.status}}" ng-if="bud.status != 'dlt'">
 				<b>UserName</b>  : <span ng-bind="bud.username"></span><br>
 				<b>FirstName</b> : <span ng-bind="bud.fname"></span><br>
@@ -10,6 +27,7 @@
 				<a href="#/buddy/{{bud.id}}" class="btn btn-default fLeft">View More</a>
 				<button type="button" data="{{bud.id}}" class="btn btn-default fRight" ng-click="deleteBuddyForm(bud.id)">Delete</button>
 				<div class="clr"></div>
+				
 			</div>
 		</li>
 	</ul>

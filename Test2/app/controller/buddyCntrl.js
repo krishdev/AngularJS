@@ -10,7 +10,7 @@ mainModule.controller('buddyController',['$scope','buddyFactory','$uibModal',fun
                 keyboard: true,
                 templateUrl: 'partials/modal.tpl.html',
                 controller: 'addBuddyModalCntrl',
-                resolve: {} // empty storage
+                resolve: {}
             });
 
             modalInstance.result.then(function() {
@@ -78,7 +78,7 @@ mainModule.controller('buddyController',['$scope','buddyFactory','$uibModal',fun
                 keyboard: true,
                 templateUrl: 'partials/modalDlt.tpl.html',
                 controller: 'addBuddyModalCntrl',
-                resolve: {} // empty storage
+                resolve: {}
             });
 
             modalInstance.result.then(function() {
@@ -88,7 +88,6 @@ mainModule.controller('buddyController',['$scope','buddyFactory','$uibModal',fun
 
             });
 		
-		//$scope.dltIt = function(dlt) {
 		$scope.$on('dlt-approval',function(event, args){
 			var dlt = args.dlt;
 			if(dlt==1){
@@ -101,7 +100,18 @@ mainModule.controller('buddyController',['$scope','buddyFactory','$uibModal',fun
 				})
 			}
 		})
-		//}
+	}
+	
+	$scope.statusArray = [];
+	$scope.selectStatus = function(status) {
+		console.log('selected status');
+		$scope.statusArray = [];
+		$scope.statusArray.push(status);
+		return false;
+	}
+	$scope.statusAll = function(statusAll){
+		console.log('selected all');
+		$scope.statusArray = [];
 	}
 	
 	
