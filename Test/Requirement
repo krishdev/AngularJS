@@ -1,5 +1,0 @@
-In this set of code I had attached few requirements which were a part of my project .
-
-1. A named function that takes a number and returns the excel column code.
-2. A function that given a string replaces all numbers into their word representation (1 - one, 2 - two). Suppose that there is already a function convert(int) that accepts a number and returns its word representation.
-3. With other two css.
