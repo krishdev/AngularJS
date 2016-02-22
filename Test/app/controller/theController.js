@@ -69,7 +69,7 @@ testApp.controller('theController',['$scope',function($scope) {
 			wordArray.push(newArrayNum[i]);
 		}
 	}
-    
+    wordArray = wordArray.join(" ");
     $scope.stringToNumber = wordArray;
 }
 
