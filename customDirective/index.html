@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Custom Directive</title>
+		<script src="../vendor/angular.min.js"></script>
+		<link href="styles.css" rel="stylesheet">
+		<link href="../vendor/animate.css" rel="stylesheet">
+	</head>
+	<body ng-app="mainApp" ng-cloak>
+		<div ng-controller="mainCtrl">
+			<div class="container">
+				<h3>Creating a custome directive for toggle tab</h3>			
+			</div>
+			<toggle-tab accord-title="Heading" accord-content="Conent Goes Here"></toggle-tab>
+			<toggle-tab accord-title="Heading2" accord-content="Conent 2 Goes Here"></toggle-tab>
+			<toggle-tab accord-title="Heading3" accord-content="Conent 3 Goes Here"></toggle-tab>
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

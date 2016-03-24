@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="BankOfWestApp">
+<head>
+	<title>Angular Assignment</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+
+	<div ng-controller="BOWController as bow">
+		<label for="isAmerica">{{bow.quesText}}</label>
+		<input type="radio" name="" ng-click="bow.nextQuestion()" ng-repeat="ans in bow.answers" ng-model="{{nextQuestionId}}" value="{{ans}}"> {{ans}}
+	 
+
+
+		 
+	</div>
+	<script>
+	var bowApp = angular.module("BankOfWestApp", []);
+	bowApp.controller("BOWController", [ "Question", "QuestionMockUp", function(Question, QuestionMockUp){
+		var bow = this;	
+			Question.read({quesId:'Root', ansId:''}).then(function(response){
+			if(!response.nextQuestionId){
+				QuestionMockUp.get(function(mockRes){
+					bow.answers = mockRes.possibleAnswers;
+					bow.quesText = mockRes.nextQuestionTxt; 				
+					bow.quesId = mockRes.nextQuestionId;
+				})	
+			}
+
+			bow.answers = response.possibleAnswers;
+			bow.quesText = response.nextQuestionTxt;
+			bow.quesId = response.nextQuestionId;
+			
+		});
+
+	}]);
+
+	bowApp.factory("QuestionMockUp", function (){
+		if(params.quesId === "Root" && params.ansId === ""){
+			return {
+				nextQuestionId:"liveInUSIsYes",
+				nextQuestionTxt:"Do You live in USA",
+				possibleAnswers:[ "Yes","No"]
+			}
+		}else if(params.quesId === "LiveInUSYes" && params.ansId === "Yes"){
+			return {
+				nextQuestionId:"State",
+				possibleAnswers:[ "California","Nevada","Alaska"],
+				nextQuestionTxt:"Which State Do You live in USA"
+
+			}
+		}else if(params.quesId === "State" && params.ansId === "CA"){
+			return {
+				nextQuestionId:"City",
+				possibleAnswers:[ "San Jose","San Francisco","Sacramento"],
+				nextQuestionTxt:"Which City Do You live in CA"
+
+			}
+		}
+		
+
+	})
+	bowApp.factory("Question" , function($resource){
+		var url = "/nextQuestion"
+		return $resource(url, {
+			'read': {
+				method:'GET',
+				params:{questId: '@quesId', ansId:'@ansId'}	,
+				isArray:true			
+
+		}});	
+
+		bow.nextQuestion = function(){
+
+		}
+
+	});
+
+	 
+
+
+	</script>
+</body>
+</html>

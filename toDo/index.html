@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Technical Screening</title>
+		<style type="text/css">
+			aside{
+				float:left;
+				border: 2px solid red;
+				width: 20%;
+			}
+			section{
+				float: left;
+				width:  79.7%;
+				height: auto;
+			}
+			.secDiv{
+				height: 80px;
+				border: 2px solid red;
+			}
+			.container{
+				width: 100%;
+				border: 2px solid blue;
+			}
+			.clear{
+				clear: both;
+			}
+			@media screen and (min-width: 768px) { 
+				  section{
+					width:  79.7%;
+				  }
+				  aside{
+					  width: 20%;
+				  }
+			}
+			@media only screen and (max-width: 767px) {
+				section{
+					width: 79.4%;
+				}
+				aside{
+					width: 20%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<aside>
+			<nav>
+				nav
+				<ul>
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">HTML</a></li>
+					<li><a href="#">CSS</a></li>
+					<li><a href="#">JavaScript</a></li>
+				</ul>
+			</nav>
+			</aside>
+			<section>
+				<div class="secDiv">
+					inner Div
+				</div>
+				<div class="secDiv">
+					inner Div
+				</div>
+			</section>
+			<div class="clear"></div>
+		</div>
+	</body>
+</html>

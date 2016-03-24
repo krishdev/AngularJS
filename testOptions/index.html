@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+	<head>
+		<title>Try Test</title>
+		<script src="../vendor/angular.min.js"></script>
+	</head>
+	<body ng-controller="mainCtrl">
+		<!--<pre>
+			{{responseArray | json}}
+		</pre>-->
+		<div>
+			<span>{{displayArray.nextQuestionTxt || displayArray.nextQuestionId}}</span>
+			<div ng-repeat="opt in displayArray.possibleAnswers">
+				
+			<input type="radio" name="rad" ng-click="sendAnswer(displayArray.nextQuestionId,opt)" value="{{opt}}">{{opt}}
+			</div>
+			
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

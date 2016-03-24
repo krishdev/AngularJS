@@ -1,0 +1,32 @@
+<div class="container">
+			Welcome {{welcome}}
+	<p>
+	ID's are displayed, by clicking on the particular id will fetch you the label following to it & if you click on the parent will also fetch its corresponding child labels.
+	</p>
+	
+			<div class="showData">
+				<ul>
+				<li>
+					<div ng-click="showMe = true">
+					{{dataSet.id}}
+					<span ng-show="showMe">{{dataSet.label}}</span>
+					</div>
+					<ul>
+					<li ng-repeat="child in dataSet.childs" ng-click="showMe = true">
+						<span>{{child.id}}</span>
+						<span ng-show="showMe">{{child.label}}</span>
+						<ul>
+							<li ng-repeat="chil in child.childs" ng-click="showChild = true">
+								<span>{{chil.id}}</span>
+								<span ng-show="showChild">{{chil.label}}</span>
+							</li>
+						</ul>
+					</li>
+					</ul>	
+				</li>
+				</ul>
+			</div>
+		</div>
+<!--
+ng-repeat is used to get the data recursively.
+-->

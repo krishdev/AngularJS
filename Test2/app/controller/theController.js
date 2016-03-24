@@ -17,6 +17,7 @@ mainModule.controller('signUpController',['$scope',function($scope) {
     	thisMonth = "0"+thisMonth;
     }
     var thisDat= thisDate.getDate();
+	
     var final = thisYear+"-"+thisMonth+"-"+thisDat;
 	var notLessThan = new Date();
 	notLessThan.setFullYear(thisDate.getFullYear()-14);

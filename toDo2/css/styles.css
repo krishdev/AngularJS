@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+}
+.container{
+	margin: 0 35%;
+}
+.btnSubmit{
+	background-color: blue;
+	color: white;
+	font-weight: bolder;
+}
+.formControl{
+	margin: 5px;
+	padding: 5px;
+	border-bottom: 3px solid aqua;
+	width: 200px;
+}
+.formControl>label{
+	display: block;
+}
+.formControl>input{
+	width: 190px;
+	border: 1px solid #ccc;
+	height: 22px;
+	border-radius: 5px;
+}
+button{
+	height: 35px;
+	background-color: blue;
+	width: 95px;
+	color: white;
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+}
+button:hover{
+	background-color: #606098;
+}
+.error{
+	color: red;
+	font-size: 0.8em;
+}
+li>span{
+	color: blue;
+	cursor: pointer;
+	text-decoration:underline;
+}

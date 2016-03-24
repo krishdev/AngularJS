@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+	<head>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.css">
+		  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="../vendor/angular.min.js"></script>
+	</head>
+	<body ng-controller="mainCtrl">
+		
+		<div class="row">
+		<div id="sig1" class="signal col-sm-5">
+			<span>North South</span>
+			<div id="sig1Red" class="red red1"></div>
+			<div id="sig1Green" class="green"></div>
+			
+		</div>
+		<div id="sig2" class="signal col-sm-5">
+			
+			<div id="sig2Red" class="red"></div>
+			<div id="sig2Green" class="green green1"></div>
+			<span>East West</span>
+		</div>
+		<button id="btnToggle" type="button" ng-click="toggleMe()">Toggle Me</button>
+		<div class="clr"></div>
+		</div>
+		<script src="app.js"></script>
+		<script src="mainController.js"></script>
+	</body>
+</html>

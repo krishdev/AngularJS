@@ -1,0 +1,34 @@
+[
+   {
+      "nextQuestionId":"LiveInUSYes",
+      "nextQuestionTxt":"Do You live in USA",
+      "possibleAnswers":[
+         "Yes",
+         "No"
+      ]
+   },
+   {
+      "questionId":"LiveInUSYes",
+      "answerid":"Yes"
+   },
+   {
+      "nextQuestionId":"State",
+      "possibleAnswers":[
+         "California",
+         "Nevada",
+         "Alaska"
+      ]
+   },
+   {
+      "questionId":"State",
+      "answerid":"California"
+   },
+   {
+      "nextQuestionId":"City",
+      "possibleAnswers":[
+         "San Jose",
+         "San Francisco",
+         "Sacramento"
+      ]
+   }
+]

@@ -1,0 +1,36 @@
+requestObject:{
+		questionId:"Root"
+		answerid: ""
+		}
+	responseObject:{
+		nextQuestionId:"liveInUSIsYes",
+		nextQuestionTxt:"Do You live in USA"
+		possibleAnswers:[ "Yes","No"]
+		}
+	
+	--//-- 2
+	
+		requestObject:{
+			questionId:"LiveInUSYes"
+			answerid: "Yes"
+			}
+		responseObject:{
+			nextQuestionId:"State"
+			possibleAnswers:[ "California","Nevada","Alaska"]
+			}
+	--//-- 3
+		requestObject:{
+			questionId:"State"
+			answerid: "CA"
+			}
+		responseObject:{
+			nextQuestionId:"City"
+			possibleAnswers:[ "San Jose","San Francisco","Sacramento"]
+			}
+
+
+
+DO you live in USA ? yes No
+
+
+- sdsdsf 

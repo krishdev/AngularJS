@@ -1,0 +1,3 @@
+dateModule.directive('customDate',function() {
+	
+});

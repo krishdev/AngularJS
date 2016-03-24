@@ -1,0 +1,17 @@
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.container{
+	margin: 0 auto;
+}
+pre{
+	width: 50%;
+	background-color: aquamarine;
+}
+li>span{
+	color: blue;
+	cursor: pointer;
+	text-decoration:underline;
+}

@@ -1,0 +1,47 @@
+<form class="container"  name="signUpForm" novalidate ng-submit="submit(signUpForm.$valid)">
+			<h3>{{message}}</h3>
+			<div class="formControl">
+				<label>Name</label>
+				<input type="text"  name="name" ng-model="user.name"  ng-pattern="/^(\D)+$/" min maxlength="100" required>
+				<div ng-show="signUpForm.name.$error.pattern" class="error">Only Text</div>
+				<div ng-messages="signUpForm.name.$error" class="error" ng-messages-include="messages.html"></div>
+			</div>
+			<div class="formControl">
+				<label>Address1</label>
+				<input type="text" required name="street" ng-model="user.street" maxlength="100">
+				<div ng-messages="signUpForm.street.$error" class="error" ng-messages-include="messages.html"></div>
+			</div>
+			<div class="formControl">
+				<label>Address2</label>
+				<input type="text" name="street2" ng-model="user.street2" maxlength="100" >
+			</div>
+			<div class="formControl">
+				<label>City</label>
+				<input type="text" required name="city" ng-model="user.city" maxlength="50">
+				<div ng-messages="signUpForm.city.$error" class="error" ng-messages-include="messages.html"></div>
+			</div>
+			<div class="formControl">
+				<label>State</label>
+				<select  required name="state" ng-model="user.state" maxlength="2">
+					<option value="CA">CA</option>
+					<option value="TX">TX</option>
+					<option value="OH">OH</option>
+				</select>
+				<div ng-messages="signUpForm.state.$error" class="error" ng-messages-include="messages.html"></div>
+			</div>
+			<div class="formControl">
+				<label>Zip Code</label>
+				<input type="number" name="zipcode"  required ng-model="user.zipcode" ng-minlength="5" maxlength="5">
+				
+				<div ng-messages="signUpForm.zipcode.$error" class="error" ng-messages-include="messages.html"></div>
+			</div>
+			<div class="btnContainer">
+				<button type="submit">Submit</button>
+				<button type="reset">Cancel</button>
+			</div>
+		</form>
+<!--
+Here am using ng-message for passing errors messages.
+ng-message-include is used for geting the template(where the error messages are defined)
+inorder to use this feature one should inject ngmessages in the main module
+-->

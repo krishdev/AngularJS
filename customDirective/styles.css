@@ -1,0 +1,28 @@
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
+}
+.tabContainer{
+	width: 60%;
+}
+.tabHeader{
+    height: 30px;
+    text-align: left;
+    background-color: #624090;
+    font-weight: bolder;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid grey;
+    color: #fff;
+    padding: 5px 5px;
+}
+.tabBody{
+    padding: 3%;
+    background-color: azure;
+    border: 1px solid #C1BDBD;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

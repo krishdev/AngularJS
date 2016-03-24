@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="dateModule">
+	<head>
+		<title>Date Picker</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+		<link href="../vendor/jquery-ui-1.11.4.custom/jquery-ui.css" rel="stylesheet">
+		<script src="../vendor/jquery.js"></script>
+      	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<script src="../vendor/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+		<script src="../vendor/angular.min.js"></script>
+	</head>
+	<body ng-controller="dateCtrl">
+		<div>
+			<h4>Date Picker</h4>
+		</div>
+		<div >
+			{{getMinDate}}
+		Starting Date	<input type="text" ng-model="getMinDate" date-options="minOptions" custom-datepicker>
+		Returning Date	<input type="text" ng-model="date" date-options="dateOptions" custom-datepicker>
+
+		</div>
+
+		<script src="app/common/dateModule.js"></script>
+		<script src="app/app.js"></script>
+		<script src="app/directive/customDatepicker.js"></script>
+		<script src="app/controller/mainCtrl.js"></script>
+	</body>
+</html>
