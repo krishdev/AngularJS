@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="autoApp">
+    <head>
+        <title>Auto Complete</title>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="../vendor/animate.css" rel="stylesheet">
+        <script src="../vendor/jquery.js"></script>
+        <script src="../vendor/angular.min.js"></script>
+        <script src="../vendor/ui-bootstrap-tpls-1.2.5.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+
+    </head>
+    <body ng-controller="mainCtrl">
+        <div class="container">
+			<div class="jumbotron">
+				<p>
+					Simple AngularJS AutoComplete
+				</p>
+			</div>
+            <div class="autoFillContainer states">
+				<label>Search For States in United States</label>
+                <span class="group-txtClose">
+					<input class="form-control" type="text" ng-model="txtName" custom-keydown="key($event)" placeholder="start typing..">
+					<i class="glyphicon glyphicon-remove" ng-click="txtName = ''"></i>
+				</span>
+                <ul class="listRendered" ng-show="renderedNames.length > 0">
+                    <li ng-repeat="name in renderedNames" ng-click="fillTxt(name)" tabindex="{{$index+1}}" li-keydown="key($event)" li-enter="fillTxt(name)">{{name}}</li>
+                </ul>
+            </div>      
+			<div class="autoFillContainer countries">
+				<label>Search For Countries</label>
+				<span class="group-txtClose">
+                	<input class="form-control" type="text" ng-model="txtCountry" custom-keydown="key($event)" placeholder="start typing..">
+					<i class="glyphicon glyphicon-remove" ng-click="txtCountry = ''"></i>
+				</span>
+                <ul class="listRendered" ng-show="renderedCountries.length > 0">
+                    <li ng-repeat="name in renderedCountries" ng-click="fillCountry(name)" tabindex="{{$index+1}}" li-keydown="key($event)" li-enter="fillCountry(name)">{{name}}</li>
+                </ul>
+            </div> 
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

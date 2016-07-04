@@ -1,0 +1,39 @@
+.autoFillContainer{
+    position: relative;
+    margin-top: 10%;
+}
+.autoFillContainer input{
+    width: 230px;
+    height: 28px!important;
+	text-transform: uppercase;
+}
+.group-txtClose{
+	position: relative;
+}
+.group-txtClose i{
+	position: absolute;
+    right: 6px;
+    top: -2px;
+	cursor: pointer;
+}
+.autoFillContainer ul{
+    position: absolute;
+    width: 230px;
+    top: 85%;
+    left: 0;
+    margin: 0;
+	z-index: 1;
+	background: #fff;
+}
+ul li{
+    list-style: none;
+}
+.autoFillContainer ul li{
+    padding:2% 2%;
+    border-bottom:1px solid #858e93;
+    cursor: pointer;
+}
+li.active{
+	background: #8285ff;
+	color: #fff;
+}
